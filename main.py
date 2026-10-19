@@ -127,8 +127,6 @@ for attempt in range(MAX_REPRODUCTIONS):
         )
         break
 
-    # A child survives if it is at least as fit
-    # as the weakest candidate in the population
     population.sort(key=fitness, reverse=True)
 
     if fitness(child) >= fitness(population[-1]):
@@ -142,3 +140,12 @@ else:
         f"{best!r} | Fitness: "
         f"{fitness(best)}/{len(secret_text)}"
     )
+
+
+
+
+
+
+
+
+# next procedure: Create a mini CLI-based fighting game, store weights and initialize this algorithm to simulate the best possible bot and then train it through RLHF paradigm approach
